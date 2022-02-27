@@ -33,7 +33,22 @@ def clear():
 def getWidth():
     return mass
 
-
+# status func
+def getStatus():
+    if bmi_Val.get() > 40:
+        return 'You are Obese Class 3'
+    elif bmi_Val.get() > 35 or bmi_Val.get() < 40:
+        return 'Your are Obese Class 2'
+    elif bmi_Val.get() > 30 or bmi_Val.get() < 35:
+        return 'Your are Obese Class 1'
+    elif bmi_Val.get() > 25 or bmi_Val.get() < 30:
+        return 'Your are Overweight'
+    elif bmi_Val.get() > 18.5 or bmi_Val.get() < 25:
+        return 'You are Normal'
+    elif bmi_Val.get() > 17 or bmi_Val.get() < 18.5:
+        return 'Your are Mildly Thin'
+    else:
+        return 'You are Moderately Thin'
 
 # height label
 height = DoubleVar()
