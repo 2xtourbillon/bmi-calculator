@@ -22,6 +22,19 @@ def BMI_val(mass, height):
 def getHeight():
     return height
 
+# clear func
+def clear():
+    stat.set('')
+    bmi_Val.set('0.0')
+    mas.delete(0, 'end')
+    heigh.delete(0, 'end')
+
+# get width func
+def getWidth():
+    return mass
+
+
+
 # height label
 height = DoubleVar()
 h_label = Label(root, text='height', fg='red', bg='black', font=('Calibri', 14, 'bold'),
