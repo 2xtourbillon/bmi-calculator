@@ -15,6 +15,12 @@ def calc():
     bmi_Val.set(format(BMI, ".2f"))
 
 # bmi func
+def BMI_val(mass, height):
+    return mass/height ** 2
+
+# get height func
+def getHeight():
+    return height
 
 # height label
 height = DoubleVar()
