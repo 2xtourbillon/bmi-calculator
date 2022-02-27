@@ -7,6 +7,15 @@ root.title('BMI Calculator')
 root.configure(width=100, height=100)
 root.configure(bg='black')
 
+# calculate func
+def calc():
+    BMI = BMI_val(mass.get(), height.get())
+    Stat = getStatus()
+    stat.set(Stat)
+    bmi_Val.set(format(BMI, ".2f"))
+
+# bmi func
+
 # height label
 height = DoubleVar()
 h_label = Label(root, text='height', fg='red', bg='black', font=('Calibri', 14, 'bold'),
@@ -46,6 +55,7 @@ calculate = Button(root, text='Calculate', command=calc, fg='white', bg='black',
 clear = Button(root, text='Reset', command=clear, fg='black', bg='white', font=('Calibri', 12, 'bold'))
 calculate.grid(row=8)
 clear.grid(row=8, column=3)
+
 
 
 
